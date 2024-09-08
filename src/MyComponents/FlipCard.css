@@ -1,0 +1,85 @@
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.flip-card-front {
+  background-color: #009688;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.flip-card-back {
+  background-color: #f2f2f2;
+  color: black;
+  transform: rotateY(180deg);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Arial", sans-serif;
+}
+
+.flip-card-back h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.flip-card-back p {
+  margin: 10px 0;
+  line-height: 1.5;
+  display: flex;
+  width: 100%;
+}
+
+.flip-card-back .label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.flip-card-back .value {
+  margin-left: 5px;
+  color: #222;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
